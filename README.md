@@ -1,6 +1,8 @@
 # Конструктор чат-ботов Neiros
 Логика приложения чат-ботов
 
+# Блоки
+
 ### Основной массив elementsApp
 
 ```json
@@ -116,3 +118,62 @@
   }
 ]
 ```
+
+### Блок "Добавить триггер"
+
+```json
+{
+  "x": 50,
+  "y": 100,
+  "component": "Start",
+  "id": "1",
+  "data": {
+    "elements": [
+      {
+        "type": "keywords",
+        "keywords": [
+          {
+            "condition": "Совпадает",
+            "value": "123"
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "name": "Виджет №1 Квиз",
+        "variant": "Вариант Первый1"
+      },
+      {
+        "type": "multibutton",
+        "variant": "Мультикнопка №1"
+      },
+      {
+        "type": "subscribers",
+        "name": "Виджет №1 Подписчики",
+        "variant": "Вариант Первый1"
+      },
+      {
+        "type": "minilanding",
+        "name": "Виджет №1 Мини-Лендинг",
+        "variant": "Вариант Первый1"
+      }
+    ]
+  }
+}
+```
+
+| Свойство                             | Тип    | Описание                                          |
+| ------------------------------------ | ------ | ------------------------------------------------- |
+| x                                    | number | Координата X                                      |
+| y                                    | number | Координата Y                                      |
+| component                            | string | Название компонента. Для этого блока - "Start"    |
+| id                                   | string | ID                                                |
+| data.elements                        | array  | Массив содержащих элементов                       |
+| data.elements[].type                 | string | Тип содержащего элемента                          |
+| data.elements[].keywords             | array  | Массив ключевых слов (только для типа "keywords") |
+| data.elements[].keywords[].condition | string | Условие для ключевого слова                       |
+| data.elements[].keywords[].value     | string | Значение ключевого слова                          |
+| data.elements[].name                 | string | Имя виджета                                       |
+| data.elements[].variant              | string | Выбранный вариант виджета / мультикнопки          |
+
+Типы содержащих элементов блока: keywords - По ключевым словам, quiz - виджет квиз, multibutton - мультикнопка, subscribers - виджет подписчики, minilanding - виджет мини-лендинг
