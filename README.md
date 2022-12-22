@@ -1,3 +1,6 @@
+# Конструктор чат-ботов
+### Логика приложения
+
 # Блоки
 
 ### Основной массив elementsApp
@@ -272,9 +275,185 @@
 | id                    | string | ID блока                                                                |
 | nextId                | string | ID блока следующего шага                                                |
 | type                  | string | Тип шага. Для этого блока - "delay"                                     |
-| data.elements[].count | string | Количество секунд/минут/часов/суток                                     |
+| data.elements[].count | number | Количество секунд/минут/часов/суток                                     |
 | data.elements[].type  | string | "seconds" - секунды, "minutes" - минуты, "hours" - часы, "days" - сутки |
 
 Содержащий элемент всегда будет только один! Массив data.elements не должен быть пустым.
 
 **_Сюда скрины_**
+
+### Блок "Условие"
+
+```json
+{
+  "x": 750,
+  "y": 500,
+  "type": "conditions",
+  "id": "4",
+  "component": "Step",
+  "nextId": "123",
+  "data": {
+    "elements": [
+      {
+        "type": "name",
+        "name": "Какое-то имя",
+        "condition": "Совпадает",
+        "group": "1"
+      },
+      {
+        "type": "sex",
+        "sex": "Мужской",
+        "group": "2"
+      },
+      {
+        "type": "tag",
+        "tag": "Какой-то тег",
+        "group": "1"
+      }
+    ]
+  }
+}
+```
+
+| Свойство                  | Тип    | Описание                                                                                                                    |
+| ------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| x                         | number | Координата X                                                                                                                |
+| y                         | number | Координата Y                                                                                                                |
+| component                 | string | Название компонента. Для этого блока - "Step"                                                                               |
+| id                        | string | ID блока                                                                                                                    |
+| nextId                    | string | ID блока следующего шага, ДЛЯ КОНТАКТОВ БЕЗ УСЛОВИЙ                                                                         |
+| type                      | string | Тип шага. Для этого блока - "conditions"                                                                                    |
+| data.elements[].type      | string | Тип условия ("name" - имя, "sex" - пол, "tag" - тег)                                                                        |
+| data.elements[].name      | string | Значение имени. Для типа "name"                                                                                             |
+| data.elements[].condition | string | Условие имени. Для типа "name"                                                                                              |
+| data.elements[].sex       | string | Выбранный пол. Для типа "sex"                                                                                               |
+| data.elements[].tag       | string | Выбранный тег. Для типа "tag"                                                                                               |
+| data.elements[].group     | string | Группа, к которой относится условие (должно быть у каждого условия)                                                         |
+| data.elements[].nextId    | string | ID блока следующего шага для одной группы условий. Должно быть прописано в каждом условии, если в группе есть следующий шаг |
+
+**_Сюда скрины и описать про группы и следующие шаги, получение тегов_**
+
+### Блок "Случайный выбор"
+
+```json
+{
+  "x": 1150,
+  "y": 80,
+  "type": "random",
+  "id": "5",
+  "component": "Step",
+  "data": {
+    "elements": [
+      {
+        "name": "A",
+        "value": 50,
+        "nextId": "3"
+      },
+      {
+        "name": "B",
+        "value": 50,
+        "nextId": "34"
+      }
+    ]
+  }
+}
+```
+
+| Свойство               | Тип    | Описание                                            |
+| ---------------------- | ------ | --------------------------------------------------- |
+| x                      | number | Координата X                                        |
+| y                      | number | Координата Y                                        |
+| component              | string | Название компонента. Для этого блока - "Step"       |
+| id                     | string | ID блока                                            |
+| type                   | string | Тип шага. Для этого блока - "random"                |
+| data.elements[].name   | string | Имя вариации тестирования                           |
+| data.elements[].value  | number | Процент вероятности                                 |
+| data.elements[].nextId | string | ID блока следующего шага для определенного варианта |
+
+Минимальное количество элементов data.elements - 2. Максимальное - 5.
+
+Полное процент вероятности - 100. Соответственно для каждой вариации будет приходить процент 100 / n, где n - количество вариаций
+
+**_Сюда скрины и описать про группы и следующие шаги_**
+
+### Блок "Отправить сообщение"
+
+```json
+{
+  "x": 1150,
+  "y": 300,
+  "type": "message",
+  "component": "Step",
+  "id": "34",
+  "nextId": "315",
+  "data": {
+    "elements": [
+      {
+        "type": "text",
+        "text": "Какой-то текст",
+        "buttons": [
+          {
+            "id": "1234",
+            "title": "Кнопка №1",
+            "type": "url",
+            "url": "https://test.ru"
+          },
+          {
+            "id": "123",
+            "title": "Кнопка №2",
+            "type": "message",
+            "nextId": "124124"
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": ""
+      },
+      {
+        "type": "download",
+        "src": "",
+        "name": ""
+      },
+      {
+        "type": "delay",
+        "sec": 3
+      },
+      {
+        "type": "link",
+        "url": ""
+      },
+      {
+        "type": "video",
+        "src": "",
+        "name": ""
+      }
+    ]
+  }
+}
+```
+
+| Свойство                         | Тип    | Описание                                                      |
+| -------------------------------- | ------ | ------------------------------------------------------------- |
+| x                                | number | Координата X                                                  |
+| y                                | number | Координата Y                                                  |
+| component                        | string | Название компонента. Для этого блока - "Step"                 |
+| id                               | string | ID блока                                                      |
+| type                             | string | Тип шага. Для этого блока - "message"                         |
+| nextId                           | string | ID блока следующего шага                                      |
+| data.elements[].type             | string | Тип содержащего элемента                                      |
+| data.elements[].buttons          | array  | Массив кнопок для типа "text"                                 |
+| data.elements[].buttons[].id     | string | ID кнопки                                                     |
+| data.elements[].buttons[].title  | string | Заголовок кнопки                                              |
+| data.elements[].buttons[].type   | string | Тип кнопки (url - ссылка, message - сообщение)                |
+| data.elements[].buttons[].url    | string | URL кнопки для типа кнопки "url"                              |
+| data.elements[].buttons[].nextId | string | ID блока следующего шага для кнопки!                          |
+| data.elements[].text             | string | Текст сообщения для элемента type == "text"                   |
+| data.elements[].src              | string | Путь к файлу/картинке для элементов типа img, download, video |
+| data.elements[].name             | string | Имя файла для элементов типа                                                               |
+| data.elements[].url              | string | URL для элемента типа "link"                                                              |
+| data.elements[].sec              | number | Количество секунд для типа "delay"                                                              |
+
+data.elements[].type : text - текст, img - изображение, download - файл, delay - задержка, link - ссылка, video - видео
+
+С добавленными файлами надо будет додумать как их слать на сервер
