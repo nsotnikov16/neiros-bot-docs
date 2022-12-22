@@ -405,12 +405,12 @@
       },
       {
         "type": "img",
-        "src": ""
+        "src": "/upload/img1.jpg"
       },
       {
         "type": "download",
-        "src": "",
-        "name": ""
+        "src": "/upload/img1.jpg",
+        "name": "Файл1.txt"
       },
       {
         "type": "delay",
@@ -418,12 +418,12 @@
       },
       {
         "type": "link",
-        "url": ""
+        "url": "https://test@test.ru"
       },
       {
         "type": "video",
-        "src": "",
-        "name": ""
+        "src": "/upload/img1.jpg",
+        "name": "Файл1.txt"
       }
     ]
   }
