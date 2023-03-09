@@ -220,6 +220,10 @@
         "tag": "Какой-то тег"
       },
       {
+        "type": "tagDelete",
+        "tagDelete": "Какой-то тег, который нужно удалить"
+      },
+      {
         "type": "chain",
         "chain": "Какая-то последовательность"
       },
@@ -242,6 +246,7 @@
 | type                  | string | Тип шага. Для этого блока - "actions"            |
 | data.elements[].type  | string | Тип действия                                     |
 | data.elements[].tag   | string | Значение для типа "tag" (Добавить тег)           |
+| data.elements[].tagDelete   | string | Значение для типа "tagDelete" (Удалить тег)           |
 | data.elements[].chain | string | Значение для типа "chain" (Подписать на цепочку) |
 | data.elements[].talk  | string | Значение для типа "talk" (Назначить разговор)    |
 
