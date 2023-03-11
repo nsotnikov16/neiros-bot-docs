@@ -131,7 +131,7 @@
   "nextId": "2",
   "data": {
     "elements": [
-    {
+    
       {
         "type": "keywords",
         "keywords": [
@@ -160,7 +160,7 @@
         "name": "Виджет №1 Мини-Лендинг",
         "variant": "Вариант Первый1"
       }
-      }
+      
     ]
   }
 }
