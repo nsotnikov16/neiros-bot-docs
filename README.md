@@ -133,6 +133,7 @@
     "elements": [
     
       {
+      "id": "124124124",
         "type": "keywords",
         "keywords": [
           {
@@ -142,20 +143,24 @@
         ]
       },
       {
+      "id": "124124121241244",
         "type": "quiz",
         "name": "Виджет №1 Квиз",
         "variant": "Вариант Первый1"
       },
       {
+      "id": "124124124124124",
         "type": "multibutton",
         "variant": "Мультикнопка №1"
       },
       {
+      "id": "112412412424124124",
         "type": "subscribers",
         "name": "Виджет №1 Подписчики",
         "variant": "Вариант Первый1"
       },
       {
+      "id": "124124124124124",
         "type": "minilanding",
         "name": "Виджет №1 Мини-Лендинг",
         "variant": "Вариант Первый1"
@@ -180,6 +185,7 @@
 | data.elements[].keywords[].value     | string | Значение ключевого слова                          |
 | data.elements[].name                 | string | Имя виджета                                       |
 | data.elements[].variant              | string | Выбранный вариант виджета / мультикнопки          |
+| data.elements[].id             | string | ID триггера          |
 
 Типы содержащих элементов блока: keywords - По ключевым словам, quiz - виджет квиз, multibutton - мультикнопка, subscribers - виджет подписчики, minilanding - виджет мини-лендинг
 
