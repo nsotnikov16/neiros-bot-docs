@@ -252,6 +252,7 @@
 | id                    | string | ID блока                                         |
 | nextId                | string | ID блока следующего шага                         |
 | type                  | string | Тип шага. Для этого блока - "actions"            |
+| title                               | string | Название шага                          |
 | data.elements[].type  | string | Тип действия                                     |
 | data.elements[].tag   | string | Значение для типа "tag" (Добавить тег)           |
 | data.elements[].tagDelete   | string | Значение для типа "tagDelete" (Удалить тег)           |
@@ -289,6 +290,7 @@
 | id                    | string | ID блока                                                                |
 | nextId                | string | ID блока следующего шага                                                |
 | type                  | string | Тип шага. Для этого блока - "delay"                                     |
+| title                               | string | Название шага                          |
 | data.elements[].count | number | Количество секунд/минут/часов/суток                                     |
 | data.elements[].type  | string | "seconds" - секунды, "minutes" - минуты, "hours" - часы, "days" - сутки |
 
@@ -335,6 +337,7 @@
 | id                        | string | ID блока                                                                                                                    |
 | nextId                    | string | ID блока следующего шага, ДЛЯ КОНТАКТОВ БЕЗ УСЛОВИЙ                                                                         |
 | type                      | string | Тип шага. Для этого блока - "conditions"                                                                                    |
+| title                               | string | Название шага                          |
 | data.elements[].type      | string | Тип условия ("name" - имя, "sex" - пол, "tag" - тег)                                                                        |
 | data.elements[].name      | string | Значение имени. Для типа "name"                                                                                             |
 | data.elements[].condition | string | Условие имени. Для типа "name"                                                                                              |
@@ -378,6 +381,7 @@
 | component              | string | Название компонента. Для этого блока - "Step"       |
 | id                     | string | ID блока                                            |
 | type                   | string | Тип шага. Для этого блока - "random"                |
+| title                               | string | Название шага                          |
 | data.elements[].name   | string | Имя вариации тестирования                           |
 | data.elements[].value  | number | Процент вероятности                                 |
 | data.elements[].nextId | string | ID блока следующего шага для определенного варианта |
@@ -451,6 +455,7 @@
 | id                               | string | ID блока                                                                 |
 | type                             | string | Тип шага. Для этого блока - "message"                                    |
 | nextId                           | string | ID блока следующего шага                                                 |
+| title                               | string | Название шага                          |
 | data.elements[].type             | string | Тип содержащего элемента                                                 |
 | data.elements[].buttons          | array  | Массив кнопок для типа "text"                                            |
 | data.elements[].buttons[].id     | string | ID кнопки                                                                |
