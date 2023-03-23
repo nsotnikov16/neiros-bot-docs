@@ -221,6 +221,7 @@
   "id": "10",
   "nextId": "4",
   "component": "Step",
+   "title": "Действия",
   "data": {
     "elements": [
       {
@@ -270,6 +271,7 @@
   "type": "delay",
   "id": "3",
   "component": "Step",
+   "title": "Умная задержка",
   "nextId": "123",
   "data": {
     "elements": [
@@ -305,6 +307,7 @@
   "type": "conditions",
   "id": "4",
   "component": "Step",
+   "title": "Условие",
   "nextId": "123",
   "data": {
     "elements": [
@@ -357,6 +360,7 @@
   "type": "random",
   "id": "5",
   "component": "Step",
+   "title": "Случайный выбор",
   "data": {
     "elements": [
       {
@@ -398,6 +402,7 @@
   "y": 300,
   "type": "message",
   "component": "Step",
+   "title": "Отправить сообщение",
   "id": "34",
   "nextId": "315",
   "data": {
