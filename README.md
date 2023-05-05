@@ -131,9 +131,8 @@
   "nextId": "2",
   "data": {
     "elements": [
-    
       {
-      "id": "124124124",
+        "id": "124124124",
         "type": "keywords",
         "keywords": [
           {
@@ -143,29 +142,28 @@
         ]
       },
       {
-      "id": "124124121241244",
+        "id": "124124121241244",
         "type": "quiz",
         "name": "Виджет №1 Квиз",
         "variant": "Вариант Первый1"
       },
       {
-      "id": "124124124124124",
+        "id": "124124124124124",
         "type": "multibutton",
         "variant": "Мультикнопка №1"
       },
       {
-      "id": "112412412424124124",
+        "id": "112412412424124124",
         "type": "subscribers",
         "name": "Виджет №1 Подписчики",
         "variant": "Вариант Первый1"
       },
       {
-      "id": "124124124124124",
+        "id": "124124124124124",
         "type": "minilanding",
         "name": "Виджет №1 Мини-Лендинг",
         "variant": "Вариант Первый1"
       }
-      
     ]
   }
 }
@@ -185,7 +183,7 @@
 | data.elements[].keywords[].value     | string | Значение ключевого слова                          |
 | data.elements[].name                 | string | Имя виджета                                       |
 | data.elements[].variant              | string | Выбранный вариант виджета / мультикнопки          |
-| data.elements[].id             | string | ID триггера          |
+| data.elements[].id                   | string | ID триггера                                       |
 
 Типы содержащих элементов блока: keywords - По ключевым словам, quiz - виджет квиз, multibutton - мультикнопка, subscribers - виджет подписчики, minilanding - виджет мини-лендинг
 
@@ -221,7 +219,7 @@
   "id": "10",
   "nextId": "4",
   "component": "Step",
-   "title": "Действия",
+  "title": "Действия",
   "data": {
     "elements": [
       {
@@ -245,20 +243,20 @@
 }
 ```
 
-| Свойство              | Тип    | Описание                                         |
-| --------------------- | ------ | ------------------------------------------------ |
-| x                     | number | Координата X                                     |
-| y                     | number | Координата Y                                     |
-| component             | string | Название компонента. Для этого блока - "Step"    |
-| id                    | string | ID блока                                         |
-| nextId                | string | ID блока следующего шага                         |
-| type                  | string | Тип шага. Для этого блока - "actions"            |
-| title                               | string | Название шага                          |
-| data.elements[].type  | string | Тип действия                                     |
-| data.elements[].tag   | string | Значение для типа "tag" (Добавить тег)           |
-| data.elements[].tagDelete   | string | Значение для типа "tagDelete" (Удалить тег)           |
-| data.elements[].chain | string | Значение для типа "chain" (Подписать на цепочку) |
-| data.elements[].talk  | string | Значение для типа "talk" (Назначить разговор)    |
+| Свойство                  | Тип    | Описание                                         |
+| ------------------------- | ------ | ------------------------------------------------ |
+| x                         | number | Координата X                                     |
+| y                         | number | Координата Y                                     |
+| component                 | string | Название компонента. Для этого блока - "Step"    |
+| id                        | string | ID блока                                         |
+| nextId                    | string | ID блока следующего шага                         |
+| type                      | string | Тип шага. Для этого блока - "actions"            |
+| title                     | string | Название шага                                    |
+| data.elements[].type      | string | Тип действия                                     |
+| data.elements[].tag       | string | Значение для типа "tag" (Добавить тег)           |
+| data.elements[].tagDelete | string | Значение для типа "tagDelete" (Удалить тег)      |
+| data.elements[].chain     | string | Значение для типа "chain" (Подписать на цепочку) |
+| data.elements[].talk      | string | Значение для типа "talk" (Назначить разговор)    |
 
 [Аналогично апи для получения списка тегов, последовательностей, групп, пользователей](https://skr.sh/sHW4EA7r8cP)
 
@@ -271,7 +269,7 @@
   "type": "delay",
   "id": "3",
   "component": "Step",
-   "title": "Умная задержка",
+  "title": "Умная задержка",
   "nextId": "123",
   "data": {
     "elements": [
@@ -292,7 +290,7 @@
 | id                    | string | ID блока                                                                |
 | nextId                | string | ID блока следующего шага                                                |
 | type                  | string | Тип шага. Для этого блока - "delay"                                     |
-| title                               | string | Название шага                          |
+| title                 | string | Название шага                                                           |
 | data.elements[].count | number | Количество секунд/минут/часов/суток                                     |
 | data.elements[].type  | string | "seconds" - секунды, "minutes" - минуты, "hours" - часы, "days" - сутки |
 
@@ -307,7 +305,7 @@
   "type": "conditions",
   "id": "4",
   "component": "Step",
-   "title": "Условие",
+  "title": "Условие",
   "nextId": "123",
   "data": {
     "elements": [
@@ -332,22 +330,22 @@
 }
 ```
 
-| Свойство                  | Тип    | Описание                                                                                                                    |
-| ------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
-| x                         | number | Координата X                                                                                                                |
-| y                         | number | Координата Y                                                                                                                |
-| component                 | string | Название компонента. Для этого блока - "Step"                                                                               |
-| id                        | string | ID блока                                                                                                                    |
-| nextId                    | string | ID блока следующего шага, ДЛЯ КОНТАКТОВ БЕЗ УСЛОВИЙ                                                                         |
-| type                      | string | Тип шага. Для этого блока - "conditions"                                                                                    |
-| title                               | string | Название шага                          |
-| data.elements[].type      | string | Тип условия ("name" - имя, "sex" - пол, "tag" - тег)                                                                        |
-| data.elements[].name      | string | Значение имени. Для типа "name"                                                                                             |
-| data.elements[].condition | string | Условие имени. Для типа "name"                                                                                              |
-| data.elements[].sex       | string | Выбранный пол. Для типа "sex"                                                                                               |
-| data.elements[].tag       | string | Выбранный тег. Для типа "tag"                                                                                               |
-| data.elements[].group     | string | Группа, к которой относится условие (должно быть у каждого условия) (по возрастанию 1, 2, 3 ...) [скрин](https://skr.sh/sHWBdc42My5)                           |
-| data.elements[].nextId    | string | ID блока следующего шага для одной группы условий. Должно быть прописано в каждом условии, если в группе есть следующий шаг |
+| Свойство                  | Тип    | Описание                                                                                                                             |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| x                         | number | Координата X                                                                                                                         |
+| y                         | number | Координата Y                                                                                                                         |
+| component                 | string | Название компонента. Для этого блока - "Step"                                                                                        |
+| id                        | string | ID блока                                                                                                                             |
+| nextId                    | string | ID блока следующего шага, ДЛЯ КОНТАКТОВ БЕЗ УСЛОВИЙ                                                                                  |
+| type                      | string | Тип шага. Для этого блока - "conditions"                                                                                             |
+| title                     | string | Название шага                                                                                                                        |
+| data.elements[].type      | string | Тип условия ("name" - имя, "sex" - пол, "tag" - тег)                                                                                 |
+| data.elements[].name      | string | Значение имени. Для типа "name"                                                                                                      |
+| data.elements[].condition | string | Условие имени. Для типа "name"                                                                                                       |
+| data.elements[].sex       | string | Выбранный пол. Для типа "sex"                                                                                                        |
+| data.elements[].tag       | string | Выбранный тег. Для типа "tag"                                                                                                        |
+| data.elements[].group     | string | Группа, к которой относится условие (должно быть у каждого условия) (по возрастанию 1, 2, 3 ...) [скрин](https://skr.sh/sHWBdc42My5) |
+| data.elements[].nextId    | string | ID блока следующего шага для одной группы условий. Должно быть прописано в каждом условии, если в группе есть следующий шаг          |
 
 [Получение тегов](https://skr.sh/sHWDMPXUQsv)
 
@@ -360,7 +358,7 @@
   "type": "random",
   "id": "5",
   "component": "Step",
-   "title": "Случайный выбор",
+  "title": "Случайный выбор",
   "data": {
     "elements": [
       {
@@ -385,7 +383,7 @@
 | component              | string | Название компонента. Для этого блока - "Step"       |
 | id                     | string | ID блока                                            |
 | type                   | string | Тип шага. Для этого блока - "random"                |
-| title                               | string | Название шага                          |
+| title                  | string | Название шага                                       |
 | data.elements[].name   | string | Имя вариации тестирования                           |
 | data.elements[].value  | number | Процент вероятности                                 |
 | data.elements[].nextId | string | ID блока следующего шага для определенного варианта |
@@ -402,7 +400,7 @@
   "y": 300,
   "type": "message",
   "component": "Step",
-   "title": "Отправить сообщение",
+  "title": "Отправить сообщение",
   "id": "34",
   "nextId": "315",
   "data": {
@@ -424,6 +422,33 @@
             "nextId": "124124"
           }
         ]
+      },
+      {
+        "type": "question",
+        "text": "Сколько тебе лет?",
+        "answers": [
+          {
+            "id": "123",
+            "title": "10",
+            "type": "answer",
+            "nextId": "124124"
+          },
+          {
+            "id": "123",
+            "title": "12",
+            "type": "answer",
+            "nextId": "124124"
+          },
+          {
+            "id": "1234",
+            "title": "Подписчик не ответил",
+            "type": "answer",
+            "noReply": true,
+            "nextId": "124124"
+          }
+        ],
+        "field": "Возраст",
+        "fields": ["Имя", "Телефон", "Email", "Возраст"]
       },
       {
         "type": "img",
@@ -452,29 +477,37 @@
 }
 ```
 
-| Свойство                         | Тип    | Описание                                                                 |
-| -------------------------------- | ------ | ------------------------------------------------------------------------ |
-| x                                | number | Координата X                                                             |
-| y                                | number | Координата Y                                                             |
-| component                        | string | Название компонента. Для этого блока - "Step"                            |
-| id                               | string | ID блока                                                                 |
-| type                             | string | Тип шага. Для этого блока - "message"                                    |
-| nextId                           | string | ID блока следующего шага                                                 |
-| title                               | string | Название шага                          |
-| data.elements[].type             | string | Тип содержащего элемента                                                 |
-| data.elements[].buttons          | array  | Массив кнопок для типа "text"                                            |
-| data.elements[].buttons[].id     | string | ID кнопки                                                                |
-| data.elements[].buttons[].title  | string | Заголовок кнопки                                                         |
-| data.elements[].buttons[].type   | string | Тип кнопки (url - ссылка, message - сообщение)                           |
-| data.elements[].buttons[].url    | string | URL кнопки для типа кнопки "url"                                         |
-| data.elements[].buttons[].nextId | string | ID блока следующего шага для кнопки! [скрин](https://skr.sh/sHWEk9n3HkR) |
-| data.elements[].text             | string | Текст сообщения для элемента type == "text"                              |
-| data.elements[].src              | string | Путь к файлу/картинке для элементов типа img, download, video            |
-| data.elements[].name             | string | Имя файла для элементов типа                                             |
-| data.elements[].url              | string | URL для элемента типа "link"                                             |
-| data.elements[].sec              | number | Количество секунд для типа "delay"                                       |
+| Свойство                          | Тип     | Описание                                                                 |
+| --------------------------------- | ------- | ------------------------------------------------------------------------ |
+| x                                 | number  | Координата X                                                             |
+| y                                 | number  | Координата Y                                                             |
+| component                         | string  | Название компонента. Для этого блока - "Step"                            |
+| id                                | string  | ID блока                                                                 |
+| type                              | string  | Тип шага. Для этого блока - "message"                                    |
+| nextId                            | string  | ID блока следующего шага                                                 |
+| title                             | string  | Название шага                                                            |
+| data.elements[].type              | string  | Тип содержащего элемента                                                 |
+| data.elements[].buttons           | array   | Массив кнопок для типа "text"                                            |
+| data.elements[].buttons[].id      | string  | ID кнопки                                                                |
+| data.elements[].buttons[].title   | string  | Заголовок кнопки                                                         |
+| data.elements[].buttons[].type    | string  | Тип кнопки (url - ссылка, message - сообщение)                           |
+| data.elements[].buttons[].url     | string  | URL кнопки для типа кнопки "url"                                         |
+| data.elements[].buttons[].nextId  | string  | ID блока следующего шага для кнопки! [скрин](https://skr.sh/sHWEk9n3HkR) |
+| data.elements[].answers           | array   | Массив кнопок ответов для типа "question"                                |
+| data.elements[].answers[].id      | string  | ID ответа                                                                |
+| data.elements[].answers[].title   | string  | Заголовок ответа                                                         |
+| data.elements[].answers[].type    | string  | Тип кнопки ответа - всегда "answer"                                      |
+| data.elements[].answers[].noReply | boolean | Для кнопки без ответа ("Подписчик не ответил") всегда - true             |
+| data.elements[].answers[].nextId  | string  | ID блока следующего шага для ответа!                                     |
+| data.elements[].field             | string  | Выбранное поле для элемента type == 'question'                           |
+| data.elements[].fields[]          | array   | Массив полей                                                             |
+| data.elements[].text              | string  | Текст сообщения для элемента type == "text" или type == 'question'       |
+| data.elements[].src               | string  | Путь к файлу/картинке для элементов типа img, download, video            |
+| data.elements[].name              | string  | Имя файла для элементов типа                                             |
+| data.elements[].url               | string  | URL для элемента типа "link"                                             |
+| data.elements[].sec               | number  | Количество секунд для типа "delay"                                       |
 
-data.elements[].type : text - текст, img - изображение, download - файл, delay - задержка, link - ссылка, video - видео
+data.elements[].type : text - текст, question - вопрос, img - изображение, download - файл, delay - задержка, link - ссылка, video - видео
 
 С добавленными файлами надо будет обсудить загрузку на сервер, отпишись как дойдешь до этого момента
 
